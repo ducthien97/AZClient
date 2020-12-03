@@ -72,7 +72,7 @@ export default {
         customerZIP: this.enteredCustomer.zip,
         serviceNeeded: this.enteredCustomer.serviceNeed,
       };
-      axios.post('http://localhost:5000/api/requests', newRequest)
+      axios.post('http://ec2-3-94-80-238.compute-1.amazonaws.com:5000/api/requests', newRequest)
         .then((response) => {
           console.log(response);
         })

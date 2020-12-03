@@ -11,7 +11,7 @@ import axios from 'axios';
 
 export default {
   mounted() {
-    axios.get('http://localhost:5000/api/workers')
+    axios.get('http://ec2-3-94-80-238.compute-1.amazonaws.com:5000/api/workers')
       .then((res) => {
         this.pulledData = res.data;
         console.log(this.pulledData);

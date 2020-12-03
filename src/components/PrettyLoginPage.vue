@@ -56,7 +56,7 @@ export default {
   methods: {
     submitForm() {
       axios
-        .post('http://localhost:5000/api/auth', this.userData)
+        .post('http://ec2-3-94-80-238.compute-1.amazonaws.com:5000/api/auth', this.userData)
         .then((response) => {
           console.log(response.data.token);
           localStorage.setItem('x-auth-token', response.data.token);

@@ -13,7 +13,7 @@ import axios from 'axios';
 
 export default {
   beforeMount() {
-    axios.get('http://localhost:5000/api/requests')
+    axios.get('http://ec2-3-94-80-238.compute-1.amazonaws.com:5000/api/requests')
       .then((response) => {
         this.requests = response.data;
         console.log(this.requests);
