@@ -72,7 +72,7 @@ export default {
         customerZIP: this.enteredCustomer.zip,
         serviceNeeded: this.enteredCustomer.serviceNeed,
       };
-      axios.post('http://ec2-3-86-36-80.compute-1.amazonaws.com:500/api/requests', newRequest)
+      axios.post('http://ec2-3-86-36-80.compute-1.amazonaws.com:5000/api/requests', newRequest)
         .then((response) => {
           console.log(response);
         })
@@ -84,7 +84,7 @@ export default {
         title: 'Thank you!',
         message: 'Our representative will contact you soon!',
       });
-      this.$router.go(0);
+      // this.$router.go(0);
     },
   },
 };
