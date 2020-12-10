@@ -44,7 +44,7 @@ export default {
   },
   beforeMount() {
     axios
-      .get('http://ec2-3-94-80-238.compute-1.amazonaws.com:5000/api/workers')
+      .get('http://ec2-3-86-36-80.compute-1.amazonaws.com:5000/api/workers')
       .then((response) => {
         // response.headers()
         this.users = response.data;
@@ -93,7 +93,7 @@ export default {
           hourlyCharge,
         };
         axios
-          .post('http://ec2-3-94-80-238.compute-1.amazonaws.com:5000/api/workers', newUser, {
+          .post('http://ec2-3-86-36-80.compute-1.amazonaws.com:5000/api/workers', newUser, {
             headers: {
               'x-auth-token': localStorage.getItem('x-auth-token'),
             },
@@ -117,7 +117,7 @@ export default {
     deleteUser(id) {
       console.log('calling from inside deleteUser/App.vue');
       console.log(id);
-      const link = `http://ec2-3-94-80-238.compute-1.amazonaws.com:5000/api/workers/${id}`;
+      const link = `http://ec2-3-86-36-80.compute-1.amazonaws.com:5000/api/workers/${id}`;
       axios
         .delete(link, {
           headers: {
@@ -147,7 +147,7 @@ export default {
       const { objectID } = savedObject;
       console.log(objectID);
       axios
-        .put(`http://ec2-3-94-80-238.compute-1.amazonaws.com:5000/api/workers/${objectID}`, savedObject)
+        .put(`http://ec2-3-86-36-80.compute-1.amazonaws.com:5000/api/workers/${objectID}`, savedObject)
         .then((r) => {
           console.log(savedObject);
           const foundUserIndex = this.users.findIndex(
